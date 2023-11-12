@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+
+  "name": "DOM Reader",
+  "description": "Chrome extension to log DOM content to console",
+  "version": "1.0",
+
+
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "label.png"
+  },
+
+
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "extensionToCSV.js" ]
+    }
+  ]
+}
